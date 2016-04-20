@@ -1,0 +1,6 @@
+<h1>Select Class here</h1>
+
+<%= simple_form_for current_user, url: class_selection_path(current_user), remote: true do |f| %>
+  <%= f.input :sosc, collection: User::SOSCS, label: false %>
+  <%= f.button :submit, value: 'Submit' %>
+<% end %>
