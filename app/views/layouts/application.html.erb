@@ -7,10 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
+<% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
   <div id ="banner">
     <img alt="Discover Your Island" id="headingRefresh" src="http://www.tamucc.edu/images/homepage/banner_discover.jpg" width="948" />
   </div>
-
   <div id="columns">
     <div id="side">
 
