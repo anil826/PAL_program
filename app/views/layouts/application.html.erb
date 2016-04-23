@@ -29,12 +29,32 @@
         <li><%= link_to "Scheduling", students_schedule_path %></li>
       </ul>
       <br>
-      <%= button_to 'Logout', destroy_user_session_path, method: :get %>
-      <% end %>
+      <button type="button" id="logout"  data-url="<%= destroy_user_session_url %>"> Logout</button>
+      <button type="button" hidden="hidden" id="feedback"  data-url="<%= students_feedback_url %>"> Logout</button>
+
+    <% end %>
     </div>
   <div id="main">
     <%= yield %>
   </div>
   </div>
 </body>
+<script>
+    $('#logout').on('click',function(){
+        var r = confirm("Would you like to leave a feedback !");
+
+        if (r == true) {
+           location.href = $('#feedback').data('url')
+        } else {
+            $.ajax({
+                url: $('#logout').data('url'),
+                type: 'GET',
+                success: function(result) {
+                    // Do something with the result
+                }
+            });
+            location.reload();
+        }
+    })
+</script>
 </html>
