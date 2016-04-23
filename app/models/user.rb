@@ -27,4 +27,7 @@ class User < ActiveRecord::Base
   has_many :assit_evals
 
   SOSCS = %w(COSC_1435 COSC_1436 COSC_2437)
+
+
+
 end
