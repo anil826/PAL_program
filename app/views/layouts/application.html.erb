@@ -19,6 +19,7 @@
 
       <ul>
         <li><%= link_to "Home", students_main_menu_path %></li>
+        <li id="total_time" hidden="hidden"><%= $total_time.inspect %></li>
         <li><a href = "http://camslab.tamucc.edu/PAL.html">Contact</a></li>
       </ul>
 
@@ -52,6 +53,7 @@
                 success: function(result) {
                     // Do something with the result
                     location.reload();
+                    alert("Total Time : " + $('#total_time').text())
                 }
             });
 

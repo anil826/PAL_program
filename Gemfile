@@ -12,7 +12,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'simple_form'
-
+gem 'time_difference'
+gem 'rack-flash3'
 group :doc do
   # gem 'sdoc', require: false
 end
