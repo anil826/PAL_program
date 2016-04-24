@@ -53,11 +53,11 @@
                 success: function(result) {
                     // Do something with the result
                     location.reload();
-                    alert("Total Time : " + $('#total_time').text())
                 }
             });
 
         }
     })
+    window.onload = function () { if ($('#total_time').text() != 'nil' && window.location.href.indexOf('sign_in') > -1 ) alert("Total Time : " + $('#total_time').text())}
 </script>
 </html>
