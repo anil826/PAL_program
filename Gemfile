@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'rails', '4.0.0'
-# gem 'sqlite3'
-gem 'pg'
+gem 'sqlite3'
+# gem 'pg'
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -19,7 +19,7 @@ group :doc do
 end
 
 gem 'devise'
-
+gem 'devise_cas_authenticatable'
 group :production do
 
   gem 'rails_12factor'
