@@ -1,11 +1,11 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
-  config.cas_base_url = "https://sso.tamus.edu"
-  config.cas_username_column = 'username'
-  config.cas_create_user = false
-  config.cas_destination_logout_param_name = 'service'
-  config.cas_enable_single_sign_out = true
+  # config.cas_base_url = "https://login.tamucc.edu/cas"
+  # # config.cas_login_url = "http://0.0.0.0:3000"
+  # config.cas_client_config_options = {
+  #     logger: Rails.logger
+  # }
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.

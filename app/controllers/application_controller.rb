@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
 
+  # before_filter CASClient::Frameworks::Rails::Filter, :except => [ :unprotected_action, :another_unprotected_action ]
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
